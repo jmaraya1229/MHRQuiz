@@ -1,1 +1,1 @@
-# MHRQuiz
+# Monster Hunter Rise Monster Quiz
