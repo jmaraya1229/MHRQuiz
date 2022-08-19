@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 
+
 export default function App() {
 	const questions = [
 		{
 			questionText: 'What monster is this?',
-      image: 'src/images/aknosom.png',
+      img: 'https://cdn.kiranico.net/file/kiranico/mhrise-web/images/icons/em091_00.png',
 			answerOptions: [
 				{ answerText: 'Azuros', isCorrect: false },
 				{ answerText: 'Anjanath', isCorrect: false },
@@ -14,7 +15,7 @@ export default function App() {
 		},
 		{
 			questionText: 'What monster is this?',
-      image: 'src/images/barioth.png',
+      img: 'https://cdn.kiranico.net/file/kiranico/mhrise-web/images/icons/em042_00.png',
 			answerOptions: [
 				{ answerText: 'Astablos', isCorrect: false },
 				{ answerText: 'Barioth', isCorrect: true },
@@ -24,7 +25,7 @@ export default function App() {
 		},
 		{
 			questionText: 'What monster is this',
-      image: 'src/images/diablos.png',
+      img: '/',
 			answerOptions: [
 				{ answerText: 'Diablos', isCorrect: true },
 				{ answerText: 'Apex Diablos', isCorrect: false },
@@ -63,7 +64,7 @@ export default function App() {
 							<span>Question {currentQuestion + 1}</span>/{questions.length}
 						</div>
 						<div className='question-text'>{questions[currentQuestion].questionText}</div>
-            <img className='image'></img>
+            <img src={questions[currentQuestion].img} />
 					</div>
 					<div className='answer-section'>
 						{questions[currentQuestion].answerOptions.map((answerOption) => (
